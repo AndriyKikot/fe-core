@@ -1,0 +1,55 @@
+.privacy {
+  @extend %align-between;
+  border-top: 1px solid #e5e5e5;
+  min-height: 64px;
+  align-items: center;
+}
+
+.creator-link {
+  text-decoration: none;
+  color: $pink;
+}
+
+.contact-form {
+  display: flex;
+
+  &__input {
+    @include font($fs: 15px, $fw: 300, $lh: 24px, $ff: $secondary-font);
+    border: 1px solid #e7e7e7;
+    font-style: italic;
+    width: 228px;
+    height: 40px;
+    padding-left: 10px;
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: #ccc;
+    }
+
+    &:required:focus:valid:not(:placeholder-shown) {
+      border: 2px solid $accent-color;
+    }
+
+    &:required:focus:invalid:not(:placeholder-shown) {
+      border: 2px solid $pink;
+    }
+  }
+
+  &__btn {
+    @include font($fw: 700);
+    text-transform: uppercase;
+    color: #fff;
+    background-color: $accent-color;
+    border: none;
+    width: 150px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $pink;
+    }
+  }
+}

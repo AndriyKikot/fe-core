@@ -1,0 +1,24 @@
+.sections-title {
+  font-family: $heading-font;
+  text-align: center;
+  font-size: rem(24);
+  color: $secondary-font;
+
+  .sections-title__br {
+    display: block;
+    font-family: $main-font;
+    font-size: rem(30);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 14px;
+  }
+}
+
+.sections-title-line::after {
+  content: '';
+  width: 60px;
+  height: 3px;
+  background-color: $pink;
+  display: block;
+  margin: 36px auto 0px;
+}

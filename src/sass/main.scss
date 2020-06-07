@@ -1,0 +1,22 @@
+/*
+ * Все паршалы импортировать в этот файл
+ */
+
+@import 'normalize.scss';
+@import './helpers/animation.scss';
+@import './helpers/fonts';
+@import './helpers/variables';
+@import './helpers/mixins';
+@import './helpers/placehoders';
+@import 'base.scss';
+
+@import './components/container.scss';
+@import './components/sections.scss';
+@import './components/sections-title.scss';
+@import './components/sections-description.scss';
+
+@import './sections/header';
+@import './sections/hero-header';
+@import './sections/services';
+@import './sections/team';
+@import './sections/footer.scss';

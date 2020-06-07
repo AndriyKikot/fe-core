@@ -1,0 +1,104 @@
+.team {
+  padding-top: 10px;
+}
+
+.sections-title--team {
+  margin-bottom: 42px;
+}
+
+.team__list {
+  @extend %align-between;
+}
+
+.team__list-item {
+  width: 380px;
+  text-align: center;
+}
+
+.team__list-item-image {
+  position: relative;
+  margin-bottom: 28px;
+}
+
+.team__list-item-image:hover {
+  transform: translate(-10px, -10px);
+  transition: 0.2s;
+  transition-timing-function: linear;
+  box-shadow: 10px 10px $accent-color;
+
+  .overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(
+    to top,
+    rgba(252, 227, 138, 0.9),
+    rgba(243, 129, 129, 0.9)
+  );
+  visibility: hidden;
+  opacity: 0;
+  @extend %align-center;
+}
+
+.social-list {
+  position: absolute;
+  display: flex;
+
+  &__item:not(:nth-last-of-type(1)) {
+    margin-right: 1px;
+  }
+}
+
+.social-list__item-link {
+  width: 56px;
+  height: 56px;
+  background-color: $light-yellow;
+  @extend %align-center;
+  fill: $pink;
+
+  &:hover {
+    background-color: $pink;
+    transition: 0.5s;
+
+    .social-list__item-svg {
+      fill: $main-color;
+      transition: 0.2s;
+    }
+  }
+}
+
+.social-list__item-svg--facebook {
+  @include icon-size(13px, 26px);
+}
+
+.social-list__item-svg--twitter {
+  @include icon-size(26px, 22px);
+}
+
+.social-list__item-svg--pinterest {
+  @include icon-size(21px, 26px);
+}
+
+.social-list__item-svg--instagram {
+  @include icon-size(26px, 26px);
+}
+
+.team__list-item-name {
+  text-transform: uppercase;
+  color: $secondary-color;
+  margin-bottom: 12px;
+}
+
+.team__list-item-occupation {
+  font-family: $secondary-font;
+  font-weight: 300;
+  font-style: italic;
+}

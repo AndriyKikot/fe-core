@@ -1,0 +1,98 @@
+.site-header {
+  position: absolute;
+  padding: 24px 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.site-nav {
+  @extend %align-between;
+  align-items: baseline;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.site-logo {
+  color: $main-color;
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-decoration: none;
+
+  &:hover {
+    color: $light-yellow;
+    transition: 200ms;
+    transition-timing-function: linear;
+  }
+}
+
+.site-menu {
+  display: flex;
+
+  &-margin {
+    margin-right: 52px;
+  }
+}
+
+.site-menu__item:not(:last-of-type) {
+  margin-right: 58px;
+}
+
+.site-menu__link {
+  position: relative;
+  color: $main-color;
+  font-size: 0.875rem;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    color: $light-yellow;
+    transition: 200ms;
+    transition-timing-function: linear;
+  }
+}
+
+.site-menu__link-line::after {
+  @include pseudo;
+  width: 0%;
+  height: 3px;
+  background-color: $light-yellow;
+  bottom: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.site-menu__link-line:hover::after,
+.site-menu__link-line:focus::after {
+  width: 100%;
+  transition: 200ms;
+  transition-timing-function: linear;
+}
+
+.toolbar {
+  display: flex;
+
+  &__btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    &:hover .toolbar__btn-svg {
+      fill: $light-yellow;
+      transition: 200ms;
+      transition-timing-function: linear;
+    }
+
+    &-svg {
+      @include icon-size(18px, 18px);
+      fill: $main-color;
+    }
+  }
+
+  &__item:not(:last-of-type) {
+    margin-right: 42px;
+  }
+}

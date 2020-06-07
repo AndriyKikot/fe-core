@@ -1,0 +1,52 @@
+.services {
+  padding-top: 46px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    &-item {
+      flex-basis: 382px;
+      position: relative;
+
+      &:hover .services__item-svg {
+        fill: $pink;
+        transition: 0.2s;
+      }
+
+      &:not(:nth-last-of-type(-n + 3)) {
+        margin-bottom: 96px;
+      }
+    }
+  }
+
+  &__item-svg {
+    @include icon-size(32px, 32px);
+    fill: $accent-color;
+    position: absolute;
+    left: 22px;
+    top: 0;
+  }
+
+  &__item-box {
+    padding-left: 82px;
+  }
+}
+
+.sections-title--services {
+  margin-bottom: 66px;
+}
+
+.services__list-item-title {
+  font-size: 0.875rem;
+  color: $secondary-color;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.services__list-item-description {
+  font-family: $secondary-font;
+  font-size: 0.9375rem;
+  line-height: 24px;
+}
